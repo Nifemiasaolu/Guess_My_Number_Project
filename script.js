@@ -27,18 +27,21 @@ let highscore = 0;
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
-
 const displayScore = function (score) {
   document.querySelector('.score').textContent = score;
 };
-
 const displayNumber = function (number) {
   document.querySelector('.number').textContent = number;
-}
-
-const displayNumberStyle = function (width) {
+};
+const displayGuess = function (guess) {
+  document.querySelector('.guess').value = guess;
+};
+const displayBackgroundColor = function (color) {
+  document.querySelector('.body').style.backgroundColor = color;
+};
+const displayNumberWidth = function (width) {
   document.querySelector('.number').style.width = width;
-}
+};
 // Functionalizing the Check button
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -53,15 +56,16 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess === secretNumber) {
     // document.querySelector('.message').textContent = '🎉 Correct Number!';
     displayMessage('🎉 Correct Number!');
-
+    
     // document.querySelector('.number').textContent = secretNumber;
     displayNumber(secretNumber);
 
-    document.querySelector('body').style.backgroundColor = '#60b347';
+    // document.querySelector('body').style.backgroundColor = '#60b347';
+    displayBackgroundColor('#60b347');
 
     // document.querySelector('.number').style.width = '30rem';
-    displayNumberStyle('30rem');
-    
+    displayNumberWidth('30rem');
+
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
@@ -125,8 +129,8 @@ document.querySelector('.again').addEventListener('click', function () {
   // document.querySelector('.message').textContent = 'Start guessing...';
   displayMessage('Start guessing...');
   displayScore(score);
-  document.querySelector('.number').textContent = '?';
-  document.querySelector('.guess').value = '';
-  document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.number').style.width = '15rem';
+  displayNumber('?');
+  displayGuess('');
+  displayBackgroundColor('#222');
+  displayNumberWidth('15rem');
 });
