@@ -122,9 +122,9 @@ document.querySelector('.check').addEventListener('click', function () {
 
 // Functionalizing the again button
 
-document.querySelector('.again').addEventListener('click', function () {
-  secretNumber = Math.trunc(Math.random() * 20 + 1);
-  score = 20;
+// document.querySelector('.again').addEventListener('click', function () {
+//   secretNumber = Math.trunc(Math.random() * 20 + 1);
+//   score = 20;
 
   // document.querySelector('.message').textContent = 'Start guessing...';
 //   displayMessage('Start guessing...');
