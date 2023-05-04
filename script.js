@@ -127,10 +127,10 @@ document.querySelector('.again').addEventListener('click', function () {
   score = 20;
 
   // document.querySelector('.message').textContent = 'Start guessing...';
-  displayMessage('Start guessing...');
-  displayScore(score);
-  displayNumber('?');
-  displayGuess('');
-  displayBackgroundColor('#222');
-  displayNumberWidth('15rem');
-});
+//   displayMessage('Start guessing...');
+//   displayScore(score);
+//   displayNumber('?');
+//   displayGuess('');
+//   displayBackgroundColor('#222');
+//   displayNumberWidth('15rem');
+// });
